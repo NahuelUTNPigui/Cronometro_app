@@ -1,0 +1,33 @@
+{
+  "name": "cronometro",
+  "version": "1.0.3",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "electron .",
+    "dist":"electron-builder"
+  },
+  "author": "nahuel",
+  "license": "MIT",
+  "dependencies": {
+    
+    "sequelize": "^6.21.0",
+    "sqlite3": "^5.0.8"
+  },
+  "devDependencies": {
+    "electron": "^19.0.4",
+    "electron-builder": "^23.1.0"
+  },
+  "build":{
+    "appId":"Cronomento.app",
+    "productName":"Cronometro APP",
+    "target":"NSIS",
+    "directories":{
+      "output":"build"
+    },
+    "nsis":{
+      "allowToChangeInstallationDirectory":true,
+      "oneClick":false
+    }
+  }
+}

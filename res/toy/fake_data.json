@@ -1,0 +1,19 @@
+{
+    "_coments":[],
+    "projs":[
+        {"id":1,"nombre":"cids"},
+        {"id":2,"nombre":"mas cids"}
+    ],
+    "tiempos":[
+        {"fecha":"2022-06-21","tiempo_total":14400,"cod_proyecto":1},
+        {"fecha":"2022-06-22","tiempo_total":1500,"cod_proyecto":1},
+        {"fecha":"2022-06-20","tiempo_total":4400,"cod_proyecto":1},
+        {"fecha":"2022-06-19","tiempo_total":4100,"cod_proyecto":1},
+        {"fecha":"2022-06-18","tiempo_total":3500,"cod_proyecto":1},
+        {"fecha":"2022-06-21","tiempo_total":5000,"cod_proyecto":2},
+        {"fecha":"2022-06-20","tiempo_total":600,"cod_proyecto":2},
+        {"fecha":"2022-06-19","tiempo_total":12300,"cod_proyecto":2},
+        {"fecha":"2022-06-17","tiempo_total":5600,"cod_proyecto":2},
+        {"fecha":"2022-06-22","tiempo_total":1500,"cod_proyecto":2}
+    ]
+}

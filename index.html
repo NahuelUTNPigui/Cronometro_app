@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Cronometro project</title>
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <link rel="stylesheet" href="./res/style/normalize.css">
+        <link rel="stylesheet" href="./res/style/skeleton.css">
+        <link rel="stylesheet" href="./res/style/pure-min.css">
+        <link rel="stylesheet" href="./res/style/style.css">
+    </head>
+
+    <body>
+        
+        <div id="dvAllprojects" class="pure-g">
+
+            <div class="pure-u-1-24"></div>
+            <div class="pure-u-23-24">
+                <div class="pure-g">
+                    <div class="pure-u-1-3">
+                        <button id="btnExportar">Exportar</button>
+                        <button id="btnImportar">Importar</button>
+                    </div>
+                </div>
+                <br>
+                <form class="form" id="addProj">
+                    <div class="pure-g">
+                        <div class="pure-u-1-4">
+                            <label for="txtId">Id:</label>
+                            <input type="number" id="txtId" readonly=''>
+                        </div>
+                        <div class="pure-u-1-4">
+                            <label for="txtNombre">Nombre:</label>
+                            <input type="text" id="txtNombre" maxlength="25">
+                        </div>
+                        <div class="pure-u-1-4">
+                            <span><strong>Tipo de Operacion: </strong><span id="spnProyecto">Guardar</span></span>
+                            <button id="btnProyecto">Guardar</button>
+                        </div>
+                        <div class="pure-u-1-4">
+                            <button id="btnNuevoProyecto">Nuevo</button>
+                        </div>
+                    </div>
+
+                </form>
+                <table id="tblProjects">
+                    <thead>
+                        <th>Proyecto</th>
+                        <th>Tiempo hoy</th>
+                        
+                        <th>Cronometro</th>
+                        <th>Minutos</th>
+                        <th>Acciones</th>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+    
+            </div>
+        </div>
+        <div id="projectDetail" class="pure-g hidden">
+
+            <div class="pure-u-1-24"></div>
+            <div class="pure-u-23-24">
+                <button id="btnVolver">Volver</button>
+                <br>
+                <div class="pure-g">
+                    <div class="pure-u-1-8">
+                        <h3># <span id="hId"></span></h3>
+                    </div>
+                    <div class="pure-u-1-4">
+                        <h3 id="hNombre"></h3>
+                    </div>
+
+
+                </div>
+                <div class="pure-g">
+                    <div class="pure-u-1-1">
+                        <strong>Guardar un tiempo</strong>
+                        
+                    </div>
+                </div>
+                <div class="pure-g">
+                    <div class="pure-u-1-8">
+                        Elegir fecha:
+                    </div>
+                    <div class="pure-u-1-4">
+                        <input type="date"  id="dtpDetalle">
+                    </div>
+                    <div class="pure-u-1-4">
+                        
+                        <input id="minutosDetalle" type="number">
+                                               
+                    </div>
+                    <div class="pure-u-1-4">
+                        <button id="btnAgregarDetalle"> Agregar</button>
+                        <button id="btnQuitarDetalle"> Quitar</button>
+                    </div>
+                </div>
+                <div class="pure-g">
+                    <div class="pure-u-6-24">
+                        <label for="dtpDetalleDesde">Desde</label>
+                        <input type="date" id="dtpDetalleDesde" />
+                    </div>
+                    <div class="pure-u-1-24">
+                        
+                    </div>
+                    <div class="pure-u-6-24">
+                        <label for="dtpDetalleHasta">Hasta</label>
+                        <input type="date" id="dtpDetalleHasta" />
+                    </div>
+                </div>
+                <br>
+                <div class="pure-g">
+                    <div class="pure-u-1-4">
+                        <button id="btnBuscar">Buscar</button>
+                    </div>
+                    <div class="pure-u-1-2">
+                        Total Tiempo: <span id="spnTotal"></span>
+                    </div>
+                </div>
+                <div class="pure-g">
+                    <div class="pure-u-1-1">
+                        <table id="tblDetalle">
+                            <thead>
+                                <th>Tiempo</th>
+                                <th>Fecha</th>
+                                <th>Minutos</th>
+                                <th>Tareas</th>
+                            </thead>
+                            <tbody>
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+            </div>
+
+            
+        </div>
+        <div id="tareas" class="pure-g hidden">
+            <div class="pure-u-1-24"></div>
+            <div class="pure-u-23-24">
+                <div class="pure-g pure-u-1">
+                    <button id="btnVolverTareas">Volver</button>
+                </div>
+                <div class="pure-g">
+                    <div class="pure-u-1-2">
+                        <div class="pure-g pure-u-1">
+                            Id
+                        </div>
+                        <div class="pure-g pure-u-1">
+                            <input id="txtIdTarea" type="number" readonly>
+                        </div>
+                        <br>
+                        <div class="pure-g pure-u-1">
+                            Nombre
+                        </div>
+                        <div class="pure-g pure-u-1">
+                            <input id="txtNombreTarea" type="text" >
+                        </div>
+                        
+                        <div class="pure-g ">
+                            
+                            <div class="pure-u-1-3">
+                                <br>
+                                <button id="btnnuevaTarea">Nuevo</button>
+                            </div>
+                            <div class="pure-u-1-3">
+                                <br>
+                                <button id="btnagregarTarea">Agregar</button>
+                            </div>
+                            <div class="pure-u-1-3">
+                                <br>
+                                <button id="btnquitarTarea">Quitar</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pure-u-1-2">
+                        <select  id="cboTareas" size="120">
+                            <option value="">1</option>
+                            <option value="">2</option>
+                            <option value="">2</option>
+                            <option value="">2</option>
+                            <option value="">2</option>
+                            <option value="">2</option>
+                            <option value="">2</option>
+                            <option value="">2</option>
+                        </select>
+                    </div>
+                </div>
+    
+            </div>
+            
+        </div>
+
+        <script src="./res/js/app.js"></script>
+    </body>
+</html>

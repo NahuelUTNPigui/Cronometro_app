@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Cronometro project</title>
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <link rel="stylesheet" href="./res/style/normalize.css">
+        <link rel="stylesheet" href="./res/style/skeleton.css">
+        <link rel="stylesheet" href="./res/style/pure-min.css">
+        <link rel="stylesheet" href="./res/style/style.css">
+    </head>
+
+    <body>
+
+        <div id="undiv"
+            x-data="{books:[]}"
+            x-init="iniciar()"
+            >
+            <div x-text="JSON.stringify(books)"></div>
+        </div>
+
+        <script src="./res/js/toy_app.js"></script>
+        
+    </body>
+</html>

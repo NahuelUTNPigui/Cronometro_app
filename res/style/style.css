@@ -1,0 +1,8 @@
+select { 
+    width:400px;
+    height: 150px; 
+}
+    
+select:focus {
+    width:auto; 
+}
